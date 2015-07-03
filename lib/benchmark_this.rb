@@ -6,8 +6,8 @@ def benchmark_this
   puts '------------------------------------------------------------------------------'
   
   # check_upto
-  # check_ord
-  check_case
+  check_ord
+  # check_case
   # check_include
 end
 
@@ -81,9 +81,9 @@ end
 # same functionality as check_case, but uses Array.include? instead of case/when
 #------------------------------------------------------------------------------
 def check_include
-  runs    = 10000
+  runs    = 100000
   string  = '1;3@5~7]9>' * 50
-  puts "\n---> ord @ #{runs}"
+  puts "\n---> include @ #{runs}"
   chars = [0x0A,    # \n
            0x21,    # !
            0x23,    # #
