@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+
+platform = ENV.fetch('platform', 'osx')
+require "motion/project/template/#{platform}"
+
+require 'bundler'
+Bundler.require
+
+Motion::Project::App.setup do |app|
+  app.name   = 'benchmark-rm'
+  app.files += Dir.glob(File.join(app.project_dir, '../lib/**/*.rb'))
+end
