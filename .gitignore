@@ -15,3 +15,5 @@ nbproject
 .sass-cache
 .idea
 .dat*.*
+Gemfile.lock
+rubymotion/Gemfile.lock
